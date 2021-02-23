@@ -1,0 +1,6 @@
+Route::get('/verify',[\App\Http\Controllers\sendmoneycontroller::class,'viewverify'])->middleware('check');
+Route::post('/checkaccnumber',[\App\Http\Controllers\sendmoneycontroller::class,'verifyaccno']);
+Route::post('/addreptodb',[\App\Http\Controllers\sendmoneycontroller::class,'recipient']);
+Route::post('/initiatepay',[\App\Http\Controllers\sendmoneycontroller::class,'initiate']);
+Route::post('/finalizepay',[\App\Http\Controllers\sendmoneycontroller::class,'finalize']);
+Route::post('/getreadytotransfer',[\App\Http\Controllers\sendmoneycontroller::class,'getreadytotransfer']);
